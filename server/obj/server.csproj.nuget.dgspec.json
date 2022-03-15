@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\Leona\\Documents\\GitHub\\testes-.net\\server\\server.csproj": {}
+    "d:\\Users\\Leona\\Documents\\GitHub\\testes-.net\\server\\server.csproj": {}
   },
   "projects": {
-    "D:\\Users\\Leona\\Documents\\GitHub\\testes-.net\\server\\server.csproj": {
+    "d:\\Users\\Leona\\Documents\\GitHub\\testes-.net\\server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\Leona\\Documents\\GitHub\\testes-.net\\server\\server.csproj",
+        "projectUniqueName": "d:\\Users\\Leona\\Documents\\GitHub\\testes-.net\\server\\server.csproj",
         "projectName": "server",
-        "projectPath": "D:\\Users\\Leona\\Documents\\GitHub\\testes-.net\\server\\server.csproj",
+        "projectPath": "d:\\Users\\Leona\\Documents\\GitHub\\testes-.net\\server\\server.csproj",
         "packagesPath": "C:\\Users\\Leona\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\Leona\\Documents\\GitHub\\testes-.net\\server\\obj\\",
+        "outputPath": "d:\\Users\\Leona\\Documents\\GitHub\\testes-.net\\server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Leona\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "EntityFramework6.Npgsql": {
+              "target": "Package",
+              "version": "[6.4.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.3, )"
@@ -62,9 +70,17 @@
               "target": "Package",
               "version": "[6.0.3, )"
             },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[6.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

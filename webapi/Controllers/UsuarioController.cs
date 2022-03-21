@@ -7,15 +7,30 @@ namespace usuario.Controllers
     [Route("api/[controller]")]
     public class UsuarioController : ControllerBase
     {
-        private static List<Usuario> usuarios() 
+        private static List<Usuario> usuarios()
         {
-            return new List<Usuario>
-        }   
-        
+            return new List<Usuario>{
+                new Usuario{
+                    Id = 0,
+                    Name = "Leo",
+                    Password = "qwer1234",
+                }
+            };
+        }
+
         [HttpGet]
-        public string Get()
+        public IActionResult Get()
         {
-            return "ok";
+            return Ok(usuarios());
+        }
+
+
+        [HttpPost]
+        public IActionResult Post(Usuario usuario)
+        {
+            var users = usuarios();
+            users.Add(usuario);
+            return Ok(users);
         }
     }
 }

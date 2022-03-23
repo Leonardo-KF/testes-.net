@@ -11,5 +11,7 @@ namespace webapi.Repository
         void AddUser(Usuario user);
         void UpdateUser(Usuario user);
         void DeleteUser(int id);
+
+        Task<bool> SaveChangesAsync();
     }
 }

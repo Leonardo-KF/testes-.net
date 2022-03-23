@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using usuario.Models;
+using webapi.Repository;
 
 namespace usuario.Controllers
 {
@@ -7,30 +8,26 @@ namespace usuario.Controllers
     [Route("api/[controller]")]
     public class UsuarioController : ControllerBase
     {
-        private static List<Usuario> usuarios()
+        private readonly IUsuarioRepository _repository;
+        public UsuarioController(IUsuarioRepository repository)
         {
-            return new List<Usuario>{
-                new Usuario{
-                    Id = 0,
-                    Name = "Leo",
-                    Password = "qwer1234",
-                }
-            };
+            _repository = repository;
         }
+
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(usuarios());
+            return Ok();
         }
 
 
         [HttpPost]
-        public IActionResult Post(Usuario usuario)
+        public async Task<IActionResult> Post(Usuario usuario)
         {
-            var users = usuarios();
-            users.Add(usuario);
-            return Ok(users);
+            _repository.AddUser(usuario);
+
+            return await _repository.SaveChangesAsync() ? Ok("Usuario cadastrado com sucesso") : StatusCode(500, "Erro ao cadastrar usuario");
         }
     }
 }

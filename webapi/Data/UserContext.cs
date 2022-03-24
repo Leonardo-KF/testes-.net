@@ -20,5 +20,9 @@ namespace webapi.Data
             usuario.Property(x => x.Name).HasColumnName("name").IsRequired();
             usuario.Property(x => x.Password).HasColumnName("password").IsRequired();
         }
+
+        // create a table user in the postgresql database with dotnet
+
+
     }
 }

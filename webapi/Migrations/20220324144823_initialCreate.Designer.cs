@@ -11,8 +11,8 @@ using webapi.Data;
 namespace webapi.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20220321200531_UpdateUsersTable")]
-    partial class UpdateUsersTable
+    [Migration("20220324144823_initialCreate")]
+    partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
